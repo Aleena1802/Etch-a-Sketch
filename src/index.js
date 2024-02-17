@@ -25,13 +25,15 @@ container.style.height=`${height*30}px`;
 
 //e represented the grid div calling the function.
 function changeColor(e){
-    e.target.style.backgroundColor = `rgb(${generateRandomColor()})`; // Corrected the style assignment
+    e.target.style.backgroundColor = `rgb(${generateRandomColor()})`;
 }
 
+//generates random rgb number
 function generateRandomNumber(){
     return Math.floor(Math.random() * 256);
 }
 
+//return an rgb color using the random numbers generated
 function generateRandomColor(){
     var red=generateRandomNumber();
     var green=generateRandomNumber();
