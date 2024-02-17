@@ -41,3 +41,13 @@ function generateRandomColor(){
     return red+','+green+','+blue;
 }
 
+const reset=document.querySelector('.reset');
+reset.addEventListener('click',resetGrid);
+
+function resetGrid(){
+    const container=document.querySelector('.container');
+    var grid=container.childNodes;
+    grid.forEach((elem)=>{
+        elem.style.backgroundColor='white';
+    })
+}
