@@ -1,12 +1,26 @@
-const container=document.querySelector('.container');
+const button=document.querySelector('.btn');
+button.addEventListener('click',changeGridSize);
 
-for(let i=0; i<16; i++){
-    for(let j=0; j<16; j++){
+function changeGridSize(){
+var height=document.getElementById('height1').value;
+var width=document.getElementById('width1').value;
+const container=document.querySelector('.container');
+if(height>100 || width>100){
+    container.innerHTML="sorry, please choose a grid size between 0 and 100";
+}
+else{
+container.innerHTML="";
+for(let i=0; i<height; i++){
+    for(let j=0; j<width; j++){
      var grid=document.createElement('div');
      grid.classList.add('grid');
      grid.addEventListener('mouseover',changeColor); 
      container.append(grid);
     }
+}
+container.style.width=`${width*30}px`;
+container.style.height=`${height*30}px`;
+}
 }
 
 //e represented the grid div calling the function.
@@ -25,7 +39,3 @@ function generateRandomColor(){
     return red+','+green+','+blue;
 }
 
-function changeGridSize(){
-    var height=document.getElementsByName('height1');
-    console.log(height);
-}
