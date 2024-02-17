@@ -25,3 +25,7 @@ function generateRandomColor(){
     return red+','+green+','+blue;
 }
 
+function changeGridSize(){
+    var height=document.getElementsByName('height1');
+    console.log(height);
+}
