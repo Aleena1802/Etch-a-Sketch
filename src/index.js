@@ -24,3 +24,4 @@ function generateRandomColor(){
     var blue=generateRandomNumber();
     return red+','+green+','+blue;
 }
+
