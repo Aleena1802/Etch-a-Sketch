@@ -11,11 +11,16 @@ for(let i=0; i<16; i++){
 
 //e represented the grid div calling the function.
 function changeColor(e){
-
-    e.target.style.backgroundColor = 'grey'; // Corrected the style assignment
+    e.target.style.backgroundColor = `rgb(${generateRandomColor()})`; // Corrected the style assignment
 }
 
 function generateRandomNumber(){
     return Math.floor(Math.random() * 256);
 }
 
+function generateRandomColor(){
+    var red=generateRandomNumber();
+    var green=generateRandomNumber();
+    var blue=generateRandomNumber();
+    return red+','+green+','+blue;
+}
