@@ -18,8 +18,8 @@ for(let i=0; i<height; i++){
      container.append(grid);
     }
 }
-container.style.width=`${width*30}px`;
-container.style.height=`${height*30}px`;
+container.style.width=`${width*40}px`;
+container.style.height=`${height*40}px`;
 }
 }
 
