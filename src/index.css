@@ -21,9 +21,13 @@ input{
     font-size: 25px;
 }
 button{
-    width: 100px;
-    height: 30px;
-    font-size: 25px;
+    width: 110px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: lightslategray;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 .container{
     width: 480px; 
