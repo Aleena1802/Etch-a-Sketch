@@ -14,6 +14,9 @@ h1{
     background-color: pink; 
     margin-top: 0;
 }
+fieldset{
+    border: 3px solid palevioletred;
+}
 .inputField{
     margin: 10px;
 }
@@ -22,13 +25,17 @@ input{
     font-size: 25px;
 }
 button{
-    width: 110px;
-    height: 45px;
+    width: 120px;
+    height: 50px;
     font-size: 15px;
     font-weight: bolder;
     background-color: lightslategray;
     border-radius: 10px;
     border: 1px solid black;
+}
+button:hover{
+    font-size: 17px;
+    background-color: slategrey;
 }
 .container{
     width: 480px; 
