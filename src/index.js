@@ -1,3 +1,5 @@
+
+//changing grid size
 const button=document.querySelector('.btn');
 button.addEventListener('click',changeGridSize);
 
@@ -23,9 +25,24 @@ container.style.height=`${height*40}px`;
 }
 }
 
+let isClicked=false;
+
 //e represented the grid div calling the function.
 function changeColor(e){
+    const black= document.querySelector('.blackInk');
+    const rainbow= document.querySelector('.rainbowInk');
+    black.addEventListener('click',()=>{
+        isClicked=true;
+    });
+    rainbow.addEventListener('click',()=>{
+        isClicked=false;
+    })
+    if(isClicked){
+        e.target.style.backgroundColor = `black`;
+    }
+    else{
     e.target.style.backgroundColor = `rgb(${generateRandomColor()})`;
+}
 }
 
 //generates random rgb number
@@ -44,6 +61,7 @@ function generateRandomColor(){
 const reset=document.querySelector('.reset');
 reset.addEventListener('click',resetGrid);
 
+//removing all colors from grid, resetting it
 function resetGrid(){
     const container=document.querySelector('.container');
     var grid=container.childNodes;
@@ -51,3 +69,4 @@ function resetGrid(){
         elem.style.backgroundColor='white';
     })
 }
+
