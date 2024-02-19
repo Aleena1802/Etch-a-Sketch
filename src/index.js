@@ -29,16 +29,17 @@ let isClicked=false;
 
 //e represented the grid div calling the function.
 function changeColor(e){
-    const black= document.querySelector('.blackInk');
+    const pickColor= document.querySelector('.pickColor');
     const rainbow= document.querySelector('.rainbowInk');
-    black.addEventListener('click',()=>{
+    pickColor.addEventListener('click',()=>{
         isClicked=true;
     });
     rainbow.addEventListener('click',()=>{
         isClicked=false;
     })
     if(isClicked){
-        e.target.style.backgroundColor = `black`;
+        const colorPicker=document.querySelector('.colorpicker');
+       e.target.style.backgroundColor = `${colorPicker.value}`;
     }
     else{
     e.target.style.backgroundColor = `rgb(${generateRandomColor()})`;

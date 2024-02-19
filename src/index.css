@@ -17,6 +17,9 @@ h1{
 fieldset{
     border: 3px solid palevioletred;
 }
+legend{
+    margin: auto;
+}
 .inputField{
     margin: 10px;
 }
@@ -32,10 +35,14 @@ button{
     background-color: lightslategray;
     border-radius: 10px;
     border: 1px solid black;
+    margin: 25px;
 }
 button:hover{
     font-size: 17px;
     background-color: slategrey;
+}
+.pickColor{
+    margin-right: 0px;
 }
 .container{
     width: 480px; 
